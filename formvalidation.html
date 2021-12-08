@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <style>
+			em,p,i{
+				color:red;
+			}
+			table{
+				padding:20px;
+				width:auto;
+				box-shadow: 0px 0px 2px blue;
+				border-radius:5px;
+			}
+        </style>
+        <script src="./validation.js"></script>
+    </head>
+    <body>
+        <h1 align="center">Form Validation</h1>
+        <form action="save.php" id="myform" method="post">
+		<p align="center"><em>The * marked field are mandatory</em></p>
+		<p id="message" align="center"></p>
+            <table align="center" cellpadding="10">
+                <tr>
+                    <th>Full Name <em> *</em> </th>
+                    <td><input type="text" id="fname" /></td>
+                </tr>
+                <tr>
+                    <th>Mobile No <em> *</em> </th>
+                    <td><input type="number" id="mobile" /></td>
+                </tr>
+				<tr>
+                    <th>Email Id <em> *</em> </th>
+                    <td><input type="email" id="emailid" /></td>
+                </tr>
+				<tr>
+                    <th>Password <em> *</em> </th>
+                    <td><input type="password" id="mypassword" maxlength="8" /></td>
+                </tr>
+				<tr>
+                    <th>Gender <em> *</em> </th>
+                    <td>
+                        <input type="radio" name="gender" id="male"/> Male
+                        <input type="radio" name="gender" id="female"/> Female
+                        <p id="gendererror"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Your City <em> *</em> </th>
+                    <td> 
+                        <select id="city">
+                            <option value=""> Choose Your City</option>
+                            <option value="1"> Bangalore </option>
+                            <option value="2"> Mumbai </option>
+                            <option value="3"> Pune </option>
+                            <option value="4"> Nagpur </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Address <em> *</em></th>
+                    <td><textarea id="address" cols="30" rows="5" maxlength="200"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2"> 
+                        <input type="checkbox" checked id="tnc"> I agree to all terms and conditions
+                        <p id="tncerror"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">
+                        <button type="button" onclick="go()">Register</button>
+                    </th>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
